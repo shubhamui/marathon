@@ -1,0 +1,24 @@
+{
+  "name": "marathon",
+  "version": "1.0.0",
+  "description": "This is the backend and api creation ",
+  "main": "app.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.mjs"
+  },
+  "keywords": [
+    "Shubham",
+    "Gupta",
+    "Marathon"
+  ],
+  "author": "Shubham Gupta",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}

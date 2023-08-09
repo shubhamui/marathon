@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/viratvaishyamahapanchayat/static/css/main.72ba1a62.css",
+    "main.js": "/viratvaishyamahapanchayat/static/js/main.67dd5fcc.js",
+    "static/media/marathon-bg-1.png": "/viratvaishyamahapanchayat/static/media/marathon-bg-1.ca5ec835fe5a2dc1d8c4.png",
+    "index.html": "/viratvaishyamahapanchayat/index.html",
+    "main.72ba1a62.css.map": "/viratvaishyamahapanchayat/static/css/main.72ba1a62.css.map",
+    "main.67dd5fcc.js.map": "/viratvaishyamahapanchayat/static/js/main.67dd5fcc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.72ba1a62.css",
+    "static/js/main.67dd5fcc.js"
+  ]
+}
