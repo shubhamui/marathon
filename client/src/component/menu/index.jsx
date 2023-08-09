@@ -6,14 +6,14 @@ import VolunteerActivismTwoToneIcon from '@mui/icons-material/VolunteerActivismT
 import SupportAgentTwoToneIcon from '@mui/icons-material/SupportAgentTwoTone';
 import { Link } from 'react-router-dom';
 
-export const Menu = () => {
+export const Menu = ({setMenuOpen}) => {
   return (
     <Wrapper>
         <ul>
-            <li><Link to="/make-my-dp"><AddAPhotoTwoToneIcon />Create DP</Link></li>
-            <li><Link to="/marathon"><DirectionsRunTwoToneIcon />Marathon Registration</Link></li>
-            <li><Link to="/volunteer"><VolunteerActivismTwoToneIcon />Be a Volunteer</Link></li>
-            <li><Link to="/support"><SupportAgentTwoToneIcon />Contact</Link></li>
+            <li onClick={e => setMenuOpen(false)}><Link to="/make-my-dp"><AddAPhotoTwoToneIcon />Create DP</Link></li>
+            <li onClick={e => setMenuOpen(false)}><Link to="/marathon"><DirectionsRunTwoToneIcon />Marathon Registration</Link></li>
+            <li onClick={e => setMenuOpen(false)}><Link to="/volunteer"><VolunteerActivismTwoToneIcon />Be a Volunteer</Link></li>
+            <li onClick={e => setMenuOpen(false)}><Link to="/support"><SupportAgentTwoToneIcon />Contact</Link></li>
         </ul>
     </Wrapper>
   )

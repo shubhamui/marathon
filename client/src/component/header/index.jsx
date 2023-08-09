@@ -12,7 +12,7 @@ export const Header = () => {
     return (
         <Wrapper className="header">
             {
-                menuOpen && <Menu />
+                menuOpen && <Menu setMenuOpen={setMenuOpen} />
             }
             <button onClick={e => setMenuOpen(prev => !prev)}>
                 {
