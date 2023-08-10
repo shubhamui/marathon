@@ -15,6 +15,10 @@ body{
     flex-direction: column;
 }
 
+#vol-register{
+    text-align: center;
+    padding: 2rem;
+}
 
 .inner{
     width : 100%;
