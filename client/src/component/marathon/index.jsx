@@ -73,7 +73,7 @@ export const Marathon = () => {
               {
                 cities.map((city,index) => {
                   return (
-                    <option key={index} value={city.toLowerCase()} />
+                    <option key={index} value={city} />
                  )
 
                 })

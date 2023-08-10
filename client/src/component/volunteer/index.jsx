@@ -14,7 +14,7 @@ export const Volunteer = () => {
         if (name.length < 2){
             alert("Please enter a valid Name.")
         }
-        else if (contact.length != 10 ){
+        else if (contact.length !== 10 ){
             alert("Please enter a valid Contact Number.") 
         }
         else if (address.length <3){
