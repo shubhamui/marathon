@@ -6,6 +6,7 @@ import { Footer } from "./component/footer"
 import { Marathon } from "./component/marathon"
 import { Dp } from "./component/dp"
 
+
 export const App = () => {
   return (
     <div className="inner">
@@ -13,11 +14,9 @@ export const App = () => {
       {/* <BrowserRouter basename="/viratvaishyamahapanchayat"> */}
       <Header />
       <main style={{flex : 1}}>
-      
-        
         <Routes>
           <Route path="/" exact element={<Cover />} />
-          <Route path="/marathon" exact element={<Marathon />} />
+          <Route path="/marathon" exact element= {localStorage.getItem("registered") ? <h1>You are registered</h1> : <Marathon />} />
           <Route path="/make-my-dp" exact element={<Dp />} />
         </Routes>
       
