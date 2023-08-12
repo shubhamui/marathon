@@ -17,7 +17,7 @@ export const App = () => {
       <main style={{flex : 1}}>
         <Routes>
           <Route path="/" exact element={<Cover />} />
-          <Route path="/marathon" exact element= {localStorage.getItem("registered") ? <h1>You are registered</h1> : <Marathon />} />
+          <Route path="/marathon" exact element= {<Marathon />} />
           <Route path="/make-my-dp" exact element={<Dp />} />
           <Route path="/volunteer" exact element={ <Volunteer /> } />
         </Routes>
