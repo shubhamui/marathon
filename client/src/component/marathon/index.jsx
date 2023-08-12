@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Wrapper from './style'
 import { useNavigate } from 'react-router'
+import { services } from '../../services'
 
 export const Marathon = () => {
 
@@ -11,8 +12,6 @@ export const Marathon = () => {
 
   // const [, setName] = useState("")
 
-
-  const cities = ['Ajmer', 'Alwar', 'Baran', 'Beawar', 'Bharatpur', 'Bhilwara', 'Bikaner', 'Chittaurgarh', 'Churu', 'Dhaulpur', 'Ganganagar', 'Gangapur City', 'Hanumangarh', 'Jaipur', 'Jhunjhunu', 'Jodhpur', 'Kishangarh', 'Kota', 'Makrana', 'Nagaur', 'Pali', 'Sawai Madhopur', 'Sikar', 'Tonk', 'Udaipur']
 
   const register = () => {
     if(name.length <2){
@@ -71,7 +70,7 @@ export const Marathon = () => {
             <input list = "cities" id = "city" placeholder='--Select a city--'/>
             <datalist id="cities">
               {
-                cities.map((city,index) => {
+                services.cities.map((city,index) => {
                   return (
                     <option key={index} value={city} />
                  )
