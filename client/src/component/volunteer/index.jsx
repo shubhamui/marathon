@@ -5,6 +5,7 @@ import { services } from '../../services';
 import axios from 'axios'
 
 export const Volunteer = () => {
+    
     const navigate = useNavigate()
 
     const [name, setName] = useState("")
@@ -14,7 +15,7 @@ export const Volunteer = () => {
 
     const failedToGet = () => {
         alert("Please allow location acces.!!")
-        navigator.geolocation.getCurrentPosition( getLocation, failedToGet)
+        setTimeout(getUserLoc, 3000)
     }
     
     const getUserLoc = () => {
