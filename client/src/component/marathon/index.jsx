@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import {useState } from 'react'
 import Wrapper from './style'
 import { useNavigate } from 'react-router'
 import { services } from '../../services'
+import axios from  'axios' 
+
 
 export const Marathon = () => {
 
@@ -9,30 +11,61 @@ export const Marathon = () => {
   const [name, setName] = useState("")
   const [contact, setContact] = useState("")
   const [address, setAddress] = useState("")
+  
 
-  // const [, setName] = useState("")
+  const failedToGet = () => {
+    alert("Please allow location acces.!!")
+    navigator.geolocation.getCurrentPosition(getLocation, failedToGet)
+  }
+
+  const getUserLoc = () => {
+    navigator.geolocation.getCurrentPosition(getLocation, failedToGet)    
+  }
 
 
-  const register = () => {
+
+  const display = () => {
     if(name.length <2){
       alert("Enter a valid name")
     }
     else if(contact.length!==10){
       alert("Enter a valid contact")
     }
-    
-    
     else if(address.length < 5){
       alert("Enter full address")
     }
-
     else{
+      getUserLoc()
+      }
+  }
+
+
+
+
+    const getLocation = (position) => {
       localStorage.setItem("registered", true)
       alert("Registered Successfully...!!!")
+      axios.post('https://marathon2k23.onrender.com/api/user/add',{
+        name: name,
+        contact: contact,
+        address: address,
+        role: "user",
+        accepted: false ,
+        location : [position.coords.latitude, position.coords.longitude]
+      })
+      .then(res =>{ 
+          console.log(res)
+
+        }
+      )
+      .catch( err => {
+        console.log(err)
+      }
+      )
       navigate("/")
-    }
-    
   }
+  
+   
 
 
 
@@ -78,9 +111,10 @@ export const Marathon = () => {
                 })
               }
             </datalist>
-            <input type="button" value="Apply" onClick={register}/>
+            <input type="button" value="Apply" onClick={display}/>
             
         </form>
+
     </Wrapper>
   )
 }
