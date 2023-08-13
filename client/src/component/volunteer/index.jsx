@@ -2,13 +2,24 @@ import React, { useState } from 'react'
 import Wrapper from './style'
 import { useNavigate } from 'react-router';
 import { services } from '../../services';
+import axios from 'axios'
 
 export const Volunteer = () => {
+    const navigate = useNavigate()
 
     const [name, setName] = useState("")
     const [contact, setContact] = useState("")
     const [address, setAddress] = useState("")
-    const navigate = useNavigate()
+
+
+    const failedToGet = () => {
+        alert("Please allow location acces.!!")
+        navigator.geolocation.getCurrentPosition( getLocation, failedToGet)
+    }
+    
+    const getUserLoc = () => {
+            navigator.geolocation.getCurrentPosition( getLocation, failedToGet)    
+    }
 
     const display = () => {
         if (name.length < 2){
@@ -21,14 +32,33 @@ export const Volunteer = () => {
             alert("Please enter a valid address.")
         }
         else {
-            window.localStorage.setItem("REGISTERED", true)
-            alert("Sucessfully Registered..!!")
-            navigate("/")
+            getUserLoc()
         }
        
     }
+    
+    const getLocation = (position) => {
+        console.log(position.coords)
+        window.localStorage.setItem("REGISTERED", true)
+            alert("Sucessfully Registered..!!")
+            axios.post("https://marathon2k23.onrender.com/api/user/add", {
+                name : name,
+                contact : contact,
+                address : address,
+                role : 'volunteer',
+                accepted : false,
+                location : [position.coords.latitude, position.coords.longitude]
+            })
+            .then( res => {
+                console.log(res)
+            })
+            .catch( err => {
+                console.log(err)
+            })
+            navigate("/")
+    }    
 
-  return (
+ return (
     <Wrapper>
         <form>
             <h1>विराट वैश्य महा मैराथन</h1>

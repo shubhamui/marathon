@@ -11,8 +11,8 @@ import { Volunteer } from "./component/volunteer"
 export const App = () => {
   return (
     <div className="inner">
-      <BrowserRouter>
-      {/* <BrowserRouter basename="/viratvaishyamahapanchayat"> */}
+      {/* <BrowserRouter> */}
+      <BrowserRouter basename="/viratvaishyamahapanchayat">
       <Header />
       <main style={{flex : 1}}>
         <Routes>
