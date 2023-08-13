@@ -6,6 +6,7 @@ import { Footer } from "./component/footer"
 import { Marathon } from "./component/marathon"
 import { Dp } from "./component/dp"
 import { Volunteer } from "./component/volunteer"
+import { Team } from "./component/team"
 
 
 export const App = () => {
@@ -16,7 +17,7 @@ export const App = () => {
       <Header />
       <main style={{flex : 1}}>
         <Routes>
-          <Route path="/" exact element={<Cover />} />
+          <Route path="/" exact element={<><Cover /><Team /></>} />
           <Route path="/marathon" exact element= {<Marathon />} />
           <Route path="/make-my-dp" exact element={<Dp />} />
           <Route path="/volunteer" exact element={ <Volunteer /> } />
