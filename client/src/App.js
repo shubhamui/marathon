@@ -12,8 +12,7 @@ import { Team } from "./component/team"
 export const App = () => {
   return (
     <div className="inner">
-      {/* <BrowserRouter> */}
-      <BrowserRouter basename="/viratvaishyamahapanchayat">
+      <BrowserRouter>
       <Header />
       <main style={{flex : 1}}>
         <Routes>

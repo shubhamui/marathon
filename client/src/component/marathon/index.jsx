@@ -50,7 +50,7 @@ export const Marathon = () => {
         contact: contact,
         address: address,
         role: "user",
-        accepted: false ,
+        accepted: false,
         location : [position.coords.latitude, position.coords.longitude]
       })
       .then(res =>{ 

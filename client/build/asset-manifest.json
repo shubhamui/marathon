@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/viratvaishyamahapanchayat/static/css/main.85fa0a9d.css",
-    "main.js": "/viratvaishyamahapanchayat/static/js/main.636c93ce.js",
-    "static/media/marathon-bg-1.png": "/viratvaishyamahapanchayat/static/media/marathon-bg-1.ca5ec835fe5a2dc1d8c4.png",
-    "index.html": "/viratvaishyamahapanchayat/index.html",
-    "main.85fa0a9d.css.map": "/viratvaishyamahapanchayat/static/css/main.85fa0a9d.css.map",
-    "main.636c93ce.js.map": "/viratvaishyamahapanchayat/static/js/main.636c93ce.js.map"
+    "main.css": "/static/css/main.85fa0a9d.css",
+    "main.js": "/static/js/main.60ea744f.js",
+    "static/media/marathon-bg-1.png": "/static/media/marathon-bg-1.ca5ec835fe5a2dc1d8c4.png",
+    "index.html": "/index.html",
+    "main.85fa0a9d.css.map": "/static/css/main.85fa0a9d.css.map",
+    "main.60ea744f.js.map": "/static/js/main.60ea744f.js.map"
   },
   "entrypoints": [
     "static/css/main.85fa0a9d.css",
-    "static/js/main.636c93ce.js"
+    "static/js/main.60ea744f.js"
   ]
 }
