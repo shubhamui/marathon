@@ -34,6 +34,7 @@ export class User{
                 ...req.body
             })
             res.status(201).send({
+                name : req.body.name,
                 bSuccess : true,
                 message : 'User created !'
             })
